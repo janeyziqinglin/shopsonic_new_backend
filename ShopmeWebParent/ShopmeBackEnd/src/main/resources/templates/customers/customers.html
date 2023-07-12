@@ -5,8 +5,7 @@
 <div class="container-fluid">
 	<div th:replace="navigation :: menu"></div>
 	<div>
-		<h2>Manage Customers</h2>	
-		
+		<h2 style="font-size: 24px; background-color: #f2f2f2; padding: 10px;">Manage Customers</h2>
 		<a th:href="@{/customers/export/csv}" class="fas fa-file-csv fa-2x icon-dark mr-2"></a>
 	</div>
 		
@@ -50,7 +49,7 @@
 						<div th:replace="fragments :: status(${customer.enabled}, 'customer', '/customers/' + ${customer.id})" />
 					</td>
 					<td>
-						<a class="fas fa-file-alt fa-2x icon-green link-detail"
+						<a class="-file-alt fa-2x icon-green link-detail"
 							th:href="@{'/customers/detail/' + ${customer.id}}"
 							title="View details of this customer"
 							></a>					

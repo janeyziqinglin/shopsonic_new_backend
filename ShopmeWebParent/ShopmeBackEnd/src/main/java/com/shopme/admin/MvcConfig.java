@@ -29,7 +29,7 @@ public class MvcConfig implements WebMvcConfigurer {
 //		
 //		String logicalPath = pathPattern.replace("../", "") + "/**";
 //				
-//		registry.addResourceHandler(logicalPath)
+//		(logicalPath)
 //			.addResourceLocations("file:/" + absolutePath + "/");		
 //	}
 

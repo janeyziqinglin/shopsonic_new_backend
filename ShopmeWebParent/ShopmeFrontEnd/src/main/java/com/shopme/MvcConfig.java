@@ -12,7 +12,7 @@ public class MvcConfig implements WebMvcConfigurer {
 
 //	@Override
 //	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-//		exposeDirectory("../category-images", registry);
+//		exposeDirectory("../category-images", );
 //		exposeDirectory("../brand-logos", registry);
 //		exposeDirectory("../product-images", registry);
 //		exposeDirectory("../site-logo", registry);
@@ -24,7 +24,7 @@ public class MvcConfig implements WebMvcConfigurer {
 //		
 //		String logicalPath = pathPattern.replace("../", "") + "/**";
 //				
-//		registry.addResourceHandler(logicalPath)
+//		(logicalPath)
 //			.addResourceLocations("file:/" + absolutePath + "/");		
 //	}
 
