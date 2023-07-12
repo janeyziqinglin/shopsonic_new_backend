@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+	  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head th:replace="fragments :: page_head('Error - Shopme Admin', 'none')" />
+<style>
+	.error-message {
+		text-align: center;
+		background-color: #f2f2f2;
+		padding: 10px;
+	}
+	.bigger-text {
+		font-size: larger;
+		color: gray;
+	}
+
+</style>
 </head>
 <body>
 <div class="container-fluid">
 	<div th:replace="navigation :: menu"></div>
-	<div class="m-3">
-		<h2>Sorry, the requested page could not be found</h2>		
+	<div class="m-3 error-message">
+		<h2 style="font-weight: bold;color: gray;">We will be back in a bit</h2>
+		<br>
+		<h4 class="bigger-text"></h4>
+		<h4 class="bigger-text">The system is currently undergoing routine maintenance to ensure you get the best
+			experience.</h4>
+		<h4 class="bigger-text">The maintenance is expected to continue for a few hours at most.</h4>
+		<h4 class="bigger-text">Please check back later for updates.</h4>
+		<br>
+		<h4 class="bigger-text">Thank you for your understanding!</h4>
 	</div>
-
 	<div th:replace="fragments :: footer"></div>
-	
 </div>
 </body>
 </html>
