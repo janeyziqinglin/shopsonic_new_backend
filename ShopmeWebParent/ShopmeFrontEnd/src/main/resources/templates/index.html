@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments :: page_head('Shopme', 'none')" />
+<style>
+	#subscription-banner {
+		background-color: #f2f2f2;
+		padding: 5px;
+		margin-bottom: 10px;
+	}
+
+	#subscription-banner h6 {
+		text-align: center;
+		font-size: 14px;
+		margin: 0;
+		padding: 5px;
+	}
+
+	.page-title {
+		font-size: 24px;
+		background-color: #f2f2f2;
+		padding: 10px;
+		margin: 0;
+	}
+
+	.search-bar {
+		margin-bottom: 0;
+		background-color: #f2f2f2;
+	}
+</style>
 <body>
 <div class="container-fluid">
-	<div style="background-color: #f2f2f2; padding: 10px;">
-		<h6 style="text-align: center;">ENJOY 10% OFF YOUR FIRST ORDER WHEN YOU SUBSCRIBE</h6>
+	<div id="subscription-banner">
+		<h6>ENJOY 10% OFF YOUR FIRST ORDER WHEN YOU SUBSCRIBE</h6>
 	</div>
 	<div th:replace="navigation :: header_menu"></div>
-	<div th:replace="navigation :: search_nav"></div>
-	<div>
-		<h1 style="font-size: 24px; background-color: #f2f2f2; padding: 10px;">Shop by categories</h1>
-	</div>
+	<h1 class="page-title">Shop by categories</h1>
+	<div class="search-bar" th:replace="navigation :: search_nav"></div>
 
+	<div style="background-color: lightblue; padding: 10px;">
+		<h4 style="text-align: center;">Shopsonic Day deals end in:</h4>
+		<div id="countdown-clock" style="text-align: center;"></div>
+	</div>
 
 	<div class="row">
 		<div class="col" th:each="cat : ${listCategories}">
@@ -23,6 +51,38 @@
 	</div>
 
 	<div th:replace="navigation :: footer_menu"></div>
-</div>	
+</div>
+<script>
+	// Countdown clock logic here
+	function countdown() {
+		const currentDate = new Date();
+		currentDate.setDate(currentDate.getDate() + 2); // Add 2 days to the current date
+		const countdownDate = currentDate.getTime();
+
+		const countdownClock = document.getElementById("countdown-clock");
+
+		const countdownTimer = setInterval(() => {
+			const now = new Date().getTime();
+			const distance = countdownDate - now;
+
+			// Calculations for days, hours, minutes, and seconds
+			const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			// Display the countdown
+			countdownClock.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+			// If the countdown is finished, display a message
+			if (distance < 0) {
+				clearInterval(countdownTimer);
+				countdownClock.innerHTML = "Expired";
+			}
+		}, 1000);
+	}
+
+	countdown();
+</script>
 </body>
 </html>
