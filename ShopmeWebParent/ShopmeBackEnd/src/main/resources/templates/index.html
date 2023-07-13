@@ -7,14 +7,24 @@
 	<div th:replace="navigation :: menu"></div>
 	<div>
 		<h2 style="font-size: 24px; background-color: #f2f2f2; padding: 10px;">Shopsonic Control Panel</h2>
-		<h2 style="font-size: 24px; background-color: lightblue; padding: 10px;"> Welcome !
+		<h2 style="font-size: 20px; background-color: lightblue; padding: 10px;"> Welcome !
+			<span style="float: right;font-size: 18px;">
+				<span th:text="${#dates.format(#dates.createNow(), 'HH:mm')}"></span>
+            </span>
 		<a th:href="@{/account}"
 			sec:authentication="principal.fullname"></a>
 		<span sec:authentication="principal.authorities"></span>
 			<br>
 			<br>
-			<p style="font-weight: normal;">You have access to powerful tools and privileges to manage the system efficiently.</p>
+			<p style="font-weight: normal;font-size: 18px;">You have access to powerful tools and privileges to manage the system efficiently.</p>
 		</h2>
+
+
+		<div>
+			<h3 style="font-size: 20px; background-color: #f2f2f2; padding: 10px;">At a Glance</h3>
+			<p>Add relevant information and statistics here for a quick overview of the system.</p>
+		</div>
+
 	<div th:replace="fragments :: footer"></div>
 	</div>
 

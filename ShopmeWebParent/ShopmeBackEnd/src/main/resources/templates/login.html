@@ -5,16 +5,20 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0">
 
 	<title>Login - Shopsonic Admin</title>
-	
+
 	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
 	<style>
+		body {
+			background-color: #f2f2f2;
+		}
+
 		.container-fluid {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			height: 100vh;
-			margin-top: -100px; /* Adjust the value to move the content slightly above center vertically */
+			margin-top: -100px;
 		}
 
 		form {
@@ -23,6 +27,17 @@
 		}
 		.logo-img {
 			max-width: 350px;
+		}
+
+		.border {
+			background-color: white;
+			border: 2px solid #ccc; /* Increase border size and change color */
+			padding: 30px; /* Add padding for more space inside the border */
+			margin-bottom: 30px; /* Add margin to the bottom of the border */
+		}
+
+		.footer {
+			margin-top: 20px; /* Add margin to the top of the footer */
 		}
 	</style>
 
@@ -33,7 +48,7 @@
 	<div>
 		<img th:src="@{/images/ShopmeAdminBig.png}" class="img-fluid logo-img" />
 	</div>
-	
+
 	<form th:action="@{/login}" method="post" style="max-width: 350px; margin: 0 auto">
 		<div th:if="${param.error}">
 			<p class="text-danger">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
@@ -41,7 +56,7 @@
 		<div th:if="${param.logout}">
 			<p class="text-warning">You have been logged out.</p>
 		</div>
-		
+
 		<div class="border border-secondary rounded p-3">
 			<p>Login to Shopsonic Control Panel</p>
 			<p>
@@ -55,14 +70,14 @@
 			</p>
 			<p>
 				<input type="submit" value="Login" class="btn btn-primary" />
-			</p>			
+			</p>
 		</div>
 	</form>
-	
-	<div>
+
+	<div class="footer">
 		<p>Shopsonic Control Panel - Copyright &copy; Shopsonic</p>
 	</div>
-	
+
 </div>
 </body>
 </html>
