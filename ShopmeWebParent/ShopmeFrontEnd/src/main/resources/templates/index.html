@@ -3,12 +3,16 @@
 <head th:replace="fragments :: page_head('Shopme', 'none')" />
 <body>
 <div class="container-fluid">
+	<div style="background-color: #f2f2f2; padding: 10px;">
+		<h6 style="text-align: center;">ENJOY 10% OFF YOUR FIRST ORDER WHEN YOU SUBSCRIBE</h6>
+	</div>
 	<div th:replace="navigation :: header_menu"></div>
 	<div th:replace="navigation :: search_nav"></div>
 	<div>
-		<h1 style="font-size: 24px; background-color: #f2f2f2; padding: 10px;">Shopping by Categories</h1>
+		<h1 style="font-size: 24px; background-color: #f2f2f2; padding: 10px;">Shop by categories</h1>
 	</div>
-	
+
+
 	<div class="row">
 		<div class="col" th:each="cat : ${listCategories}">
 			<div><img th:src="@{${cat.imagePath}}" width="80" /></div>
@@ -17,7 +21,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div th:replace="navigation :: footer_menu"></div>
 </div>	
 </body>
