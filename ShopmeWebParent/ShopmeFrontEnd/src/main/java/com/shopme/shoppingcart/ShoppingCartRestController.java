@@ -26,7 +26,7 @@ public class ShoppingCartRestController {
 			Customer customer = getAuthenticatedCustomer(request);
 			Integer updatedQuantity = cartService.addProduct(productId, quantity, customer);
 			
-			return updatedQuantity + " item(s) of this product were added to your shopping cart.";
+			return updatedQuantity + " item(s) of this product were added to .";
 		} catch (CustomerNotFoundException ex) {
 			return "You must login to add this product to cart.";
 		} catch (ShoppingCartException ex) {

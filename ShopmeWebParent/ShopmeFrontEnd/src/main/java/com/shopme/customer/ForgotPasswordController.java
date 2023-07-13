@@ -55,15 +55,16 @@ public class ForgotPasswordController {
 		JavaMailSenderImpl mailSender = Utility.prepareMailSender(emailSettings);
 		
 		String toAddress = email;
-		String subject = "Here's the link to reset your password";
+		String subject = "Your Shopsonic Password";
 		
 		String content = "<p>Hello,</p>"
-				+ "<p>You have requested to reset your password.</p>"
+
+				+ "<p>We have received a request to reset the password for your Shopsonic account.</p>"
 				+ "Click the link below to change your password:</p>"
-				+ "<p><a href=\"" + link + "\">Change my password</a></p>"
+				+ "<p><a href=\"" + link + "\">Reset Password</a></p>"
 				+ "<br>"
-				+ "<p>Ignore this email if you do remember your password, "
-				+ "or you have not made the request.</p>";
+				+ "<p>In the event you did not make this request, please notify us."
+				+ "The security of your account is, and will continue to be, our priority.</p>";
 		
 		MimeMessage message = mailSender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(message);
