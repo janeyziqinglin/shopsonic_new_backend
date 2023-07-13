@@ -66,7 +66,7 @@
 	
 	<div th:fragment="pagination(entityName)" th:remove="tag">
 	<div class="text-center m-1" th:if="${totalItems > 0}">
-		<span>Showing [[${entityName}]] # [[${startCount}]] to [[${endCount}]] of [[${totalItems}]]</span>
+		<span> [[${entityName}]] # [[${startCount}]] - [[${endCount}]] of [[${totalItems}]]</span>
 	</div>
 	<div class="text-center m-1" th:unless="${totalItems > 0}">
 		<span>No [[${entityName}]] found</span>
