@@ -18,7 +18,7 @@
 				<th:block sec:authorize="hasAuthority('Admin')">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown"
-						th:href="@{/users}">Users</a>
+						th:href="@{/users} "style="color: lightblue;">Users</a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" th:href="@{/users/new}">Create New</a>
 						<a class="dropdown-item" th:href="@{/users}">View All</a>
@@ -29,7 +29,7 @@
 				<th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown"
-						th:href="@{/categories}">Categories</a>
+						th:href="@{/categories}">Product Categories</a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" th:href="@{/categories/new}">Create New</a>
 						<a class="dropdown-item" th:href="@{/categories}">View All</a>
@@ -37,7 +37,7 @@
 				</li>		
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown"
-						 th:href="@{/brands}">Brands</a>
+						 th:href="@{/brands}">Product Brands</a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" th:href="@{/brands/new}">Create New</a>
 						<a class="dropdown-item" th:href="@{/brands}">View All</a>
@@ -102,11 +102,11 @@
 					</div>
 				</li>		
 				<li>
-					<span class="fas fa-user fa-2x icon-silver"></span>
+					<span class="fas fa-user fa-2x icon-silver" style="color: lightblue;"></span>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown"
-						th:href="@{/account}" 
+						th:href="@{/account}" style="color: lightblue;"
 						sec:authentication="principal.fullname"></a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" id="logoutLink" href="">Logout</a>
