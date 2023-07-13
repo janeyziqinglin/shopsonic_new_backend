@@ -4,15 +4,34 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0">
 
-	<title>Login - Shopme Admin</title>
+	<title>Login - Shopsonic Admin</title>
 	
 	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+	<style>
+		.container-fluid {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin-top: -100px; /* Adjust the value to move the content slightly above center vertically */
+		}
+
+		form {
+			max-width: 350px;
+			margin: 0 auto;
+		}
+		.logo-img {
+			max-width: 300px;
+		}
+	</style>
+
 </head>
 <body>
 <div class="container-fluid text-center">
 
 	<div>
-		<img th:src="@{/images/ShopmeAdminBig.png}" class="img-fluid" />
+		<img th:src="@{/images/ShopmeAdminBig.png}" class="img-fluid logo-img" />
 	</div>
 	
 	<form th:action="@{/login}" method="post" style="max-width: 350px; margin: 0 auto">
@@ -24,7 +43,7 @@
 		</div>
 		
 		<div class="border border-secondary rounded p-3">
-			<p>Access to Shopme Control Panel</p>
+			<p>Access to Shopsonic Control Panel</p>
 			<p>
 				<input type="email" name="email" class="form-control" placeholder="E-mail" required />
 			</p>
@@ -41,7 +60,7 @@
 	</form>
 	
 	<div>
-		<p>Shopme Control Panel - Copyright &copy; Shopme</p>
+		<p>Shopsonic Control Panel - Copyright &copy; Shopsonic</p>
 	</div>
 	
 </div>

@@ -6,15 +6,18 @@
 <div class="container-fluid">
 	<div th:replace="navigation :: menu"></div>
 	<div>
-		<h2>Shopme Control Panel</h2>
-		Welcome 
-		<a th:href="@{/account}" 
-			sec:authentication="principal.fullname"></a>	
-		<span sec:authentication="principal.authorities"></span>		
+		<h2 style="font-size: 24px; background-color: #f2f2f2; padding: 10px;">Shopsonic Control Panel</h2>
+		<h2 style="font-size: 24px; background-color: lightblue; padding: 10px;"> Welcome !
+		<a th:href="@{/account}"
+			sec:authentication="principal.fullname"></a>
+		<span sec:authentication="principal.authorities"></span>
+			<br>
+			<br>
+			<p style="font-weight: normal;">You have access to powerful tools and privileges to manage the system efficiently.</p>
+		</h2>
+	<div th:replace="fragments :: footer"></div>
 	</div>
 
-	<div th:replace="fragments :: footer"></div>
-	
 </div>
 </body>
 </html>
