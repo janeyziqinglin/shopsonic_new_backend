@@ -80,7 +80,8 @@ public class ReportRestController {
 				return orderDetailReportService.getReportDataLastYear(reportType);
 
 			default:
-				return orderDetailReportService.getReportDataLast7Days(reportType);
+				return null;
+//				return orderDetailReportService.getReportDataLast7Days(reportType);
 		}
 	}
 }
