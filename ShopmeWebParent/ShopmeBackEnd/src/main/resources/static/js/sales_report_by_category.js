@@ -43,9 +43,17 @@ function prepareChartDataForSalesReportByCategory(responseJSON) {
 	});
 }
 
+// function customizeChartForSalesReportByCategory() {
+// 	chartOptions = {
+// 		height: 360, legend: {position: 'right'}
+// 	};
+// }
+
 function customizeChartForSalesReportByCategory() {
 	chartOptions = {
-		height: 360, legend: {position: 'right'}
+		height: 360,
+		legend: { position: 'right' },
+		is3D: true // Enable 3D visualization
 	};
 }
 
