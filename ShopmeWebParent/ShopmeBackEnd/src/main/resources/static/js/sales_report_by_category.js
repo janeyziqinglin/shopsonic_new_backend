@@ -60,4 +60,5 @@ function customizeChartForSalesReportByCategory() {
 function drawChartForSalesReportByCategory() {
 	var salesChart = new google.visualization.PieChart(document.getElementById('chart_sales_by_category'));
 	salesChart.draw(data, chartOptions);
+
 }

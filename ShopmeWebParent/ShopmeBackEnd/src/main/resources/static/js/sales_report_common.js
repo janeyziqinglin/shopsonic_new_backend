@@ -68,10 +68,10 @@ function formatCurrency(amount) {
 }
 
 function getChartTitle(period) {
-	if (period == "last_7_days") return "Sales in Last 7 Days";
-	if (period == "last_28_days") return "Sales in Last 28 Days";
-	if (period == "last_6_months") return "Sales in Last 6 Months";
-	if (period == "last_year") return "Sales in Last Year";
+	if (period == "last_7_days") return "Sales Analysis in Last 7 Days";
+	if (period == "last_28_days") return "Sales Analysis in Last 28 Days";
+	if (period == "last_6_months") return "Sales Analysis in Last 6 Months";
+	if (period == "last_year") return "Sales Analysis in Last Year";
 	if (period == "custom") return "Custom Date Range";
 	
 	return "";

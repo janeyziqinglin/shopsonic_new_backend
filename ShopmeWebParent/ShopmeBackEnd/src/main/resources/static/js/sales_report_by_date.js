@@ -33,7 +33,7 @@ function prepareChartDataForSalesReportByDate(responseJSON) {
 	data.addColumn('string', 'Date');
 	data.addColumn('number', 'Gross Sales');
 	data.addColumn('number', 'Net Sales');
-	data.addColumn('number', 'Orders');
+	data.addColumn('number', 'Order Numbers');
 	
 	totalGrossSales = 0.0;
 	totalNetSales = 0.0;
@@ -50,21 +50,21 @@ function prepareChartDataForSalesReportByDate(responseJSON) {
 function customizeChartForSalesReportByDate(period) {
 	chartOptions = {
 		title: getChartTitle(period),
-		'height': 360,
-		legend: {position: 'top'},
-		
+		height: 360,
+		legend: { position: 'top' },
 		series: {
-			0: {targetAxisIndex: 0},
-			1: {targetAxisIndex: 0},
-			2: {targetAxisIndex: 1},
+			0: { targetAxisIndex: 0 },
+			1: { targetAxisIndex: 0 },
+			2: { targetAxisIndex: 1 },
 		},
-		
 		vAxes: {
-			0: {title: 'Sales Amount', format: 'currency'},
-			1: {title: 'Number of Orders'}
-		}
+			0: { title: 'Sales Growth', format: 'currency' },
+			1: { title: 'Number of Orders' },
+		},
 	};
+
 }
+
 
 function drawChartForSalesReportByDate() {
 	var salesChart = new google.visualization.ColumnChart(document.getElementById('chart_sales_by_date'));
