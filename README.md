@@ -19,6 +19,18 @@ Shopsonic is a Java full-stack shopping website developed using Spring Boot, Thy
 - jQuery
 - MySQL
 - PayPal Checkout API
+- Google Chart API
+- Amazon S3 APIs
+- JUnit
+- AssertJ
+- Mockito
+- Spring Security
+- Spring OAuth
+- Spring Mail
+- Spring Data JPA
+- Spring RESTful Web services
+- Deployment on Heroku (AWS)
+
 
 ## Getting Started
 
