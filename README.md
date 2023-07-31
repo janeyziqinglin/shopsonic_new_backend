@@ -1,4 +1,4 @@
-# Shopsonic (E-commerce Full Stack)
+# Shopsonic (E-commerce Full Stack Website)
 
 Shopsonic is a Java full-stack shopping website developed using Spring Boot, Thymeleaf, Bootstrap, jQuery, and MySQL database. It provides an end-to-end e-commerce solution with features like user management, product catalog, customer management, order management, and secure payment processing.
 
