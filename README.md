@@ -31,15 +31,33 @@ Shopsonic is a Java full-stack shopping website developed using Spring Boot, Thy
 - Spring RESTful Web services
 - Deployment on Heroku (AWS)
 
+## Logging in with Sample Account
 
-## Getting Started
+To explore and test the functionalities of our website without creating your own account, you can use the provided sample account.
 
-To get started with the Shopsonic project, follow these steps:
+**Sample Account Details:**
+- Username: linjaney088@gmail.com
+- Password: 123
 
-1. Clone the repository: `git clone https://github.com/your-username/shopsonic.git`
-2. Set up the MySQL database and configure the database connection in the application properties file.
-3. Build and run the Spring Boot application.
-4. Access the website in your browser: `http://localhost:8080`
+Please note that the sample account is meant for testing purposes only and may have limited access to certain features. It's recommended to sign up for your own account to experience the website fully.
+
+### Steps to Log In:
+
+1. Go to the website's homepage at [www.shopsonic.com](https://shopsonic-admin2-efbb7f026554.herokuapp.com/login?logout).
+2. Click on the "Log In" button located at the buttom of the page.
+3. Enter the sample account username (linjaney088@gmail.com) and password (123) in the respective fields.
+4. Click on the "Log In" or "Sign In" button to proceed.
+
+Once logged in, you can navigate through different sections of the website and try out various features available to registered users.
+
+### Important Note:
+
+- For security reasons, never share your real account credentials with anyone.
+- The sample account might have certain limitations or be periodically reset, so don't rely on it for long-term use or storage of any important data.
+
+If you encounter any issues or have questions, please feel free to reach out to our support team at support@examplewebsite.com.
+
+Happy exploring!
 
 ## License
 
